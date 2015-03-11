@@ -7,9 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "Sign in", new_user_session_path %><br>
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %><br>
-<%= yield %>
+
+	<li><%= link_to "ホームページ", root_path%></li>
+	<% if user_signed_in? %>
+		<li><%= link_to current_user.email , edit_user_registration_path %></li>
+		<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+	<% else %>
+		<li><%= link_to "登録する", new_user_registration_path %></li>
+		<li><%= link_to "ログイン", new_user_session_path %></li>
+	<% end %>
+
+	<% flash.each do |message_type, message| %>
+    	<div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+	<%= yield %>
 
 </body>
 </html>
