@@ -13,7 +13,8 @@ default: &default
   host: 127.0.0.1
   adapter: mysql2
   encoding: utf8
-  #database: dev-db
+  database: dev-db
+  password: phanthao
   pool: 5
   timeout: 5000
 
