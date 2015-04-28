@@ -1,27 +1,26 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-static-top ">
   <div class="container">
-     <div class="nav form-inline"> 
-        <div class="nav navbar-nav">
-          <span class="glyphicon glyphicon-tint icon-page" aria-hidden="true"> アララ疑問 </span> 
+        <div class="navbar-header icon-page">
+          <span class="glyphicon glyphicon-tint" aria-hidden="true" style="color:white"></span> 
+           アララ疑問 
         </div>       
 
-        <div class="nav navbar-nav navbar-right">   
-           <%= link_to "ホームページ", root_path%>
-           &nbsp&nbsp&nbsp&nbsp
-           <%= link_to "質問の一覧", questions_path%>
-           &nbsp&nbsp&nbsp&nbsp
-           <% if user_signed_in? %>
-           <%= link_to current_user.email , edit_user_registration_path %>
-           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-           
-           <% else %>
-           <%= link_to "登録する", new_user_registration_path %>
-           &nbsp&nbsp&nbsp&nbsp
-           
-           <%= link_to "ログイン", new_user_session_path %>
+        <div class="collapse navbar-collapse navbar-right"> 
+          <ul class="nav navbar-nav">>
+            <li> <%= link_to "ホームページ", root_path%></li>
+            <li> <%= link_to "質問の一覧", questions_path%> </li>
+            <li> <%= link_to "質問の一覧", questions_path%> </li>
 
+             <% if user_signed_in? %>
+                <li> <%= link_to current_user.email , edit_user_registration_path %> </li>   
+                <li> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> </li>
+             <% else %>
+                <li> <%= link_to "登録する", new_user_registration_path %> </li>
+                <li> <%= link_to "ログイン", new_user_session_path %> </li>  
            <% end %>
+          </ul>  
         </div>
-     </div>
   </div>
 </nav>
+
+<br>
