@@ -1,24 +1,27 @@
-<%= form_for(@question) do |f| %>
-  <% if @question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+<div class="form">
+    <%= form_for(@question) do |f| %>
+    <% if @question.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+        <ul>
+        <% @question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <ul>
-      <% @question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="form-group">
+      <label for="title"> "タイトル" </label>
+      <%= f.text_field :title , class:'form-control'%>
+    </div>
+    <div class="form-group">
+      <label for="content"> 内容 </label>
+      <%= f.text_area :content, class:'form-control'%>
+    </div>
+    <div class="actions">
+      <%= f.submit "送信する", class:'btn form-control btn-success'%>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label "タイトル" %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label "内容" %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit "送信する" %>
-  </div>
-<% end %>
+</div>
+

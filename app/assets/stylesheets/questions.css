@@ -1,0 +1,33 @@
+.question{
+	background-color: white;
+	padding: 10px 10px 10px 10px;
+	min-height: 400px;
+	float: left;
+}
+.question a{
+	color: #666;
+}
+.content_question{
+	border-bottom: 3px ridge;
+	padding: 5px 10px 2px 15px;
+}
+.answer_question{
+	padding:10px; 
+}
+.question .table .glyphicon{
+	color: blue;
+	margin: 0px auto;
+}
+.answer_question .glyphicon{
+	font-size: 100px;
+	float: left;
+}
+
+.question .danger .glyphicon {
+	color: red;
+	margin: 0px auto;
+}
+.answer_question .form{
+	width: 86%;
+	float: right;
+}

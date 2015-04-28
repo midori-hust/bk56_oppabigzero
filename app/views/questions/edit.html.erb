@@ -1,6 +1,10 @@
-<h1>Editing question</h1>
+<div class="form-login">
+	<h2> 編集質問 </h2>
 
-<%= render 'form' %>
+	<%= render 'form' %>
+	&nbsp&nbsp&nbsp&nbsp
+	<%= link_to '表示', @question %> |
+	<%= link_to '戻る', questions_path %>
 
-<%= link_to '表示', @question %> |
-<%= link_to '戻る', questions_path %>
+</div>
+

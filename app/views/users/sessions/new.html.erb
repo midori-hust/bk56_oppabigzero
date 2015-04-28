@@ -1,18 +1,19 @@
-<h2>ログイン</h2>
+<div class="form-login">
+  <h2>ログイン</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label "メール" %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group">
+    <label for="email"> メール </label>
+    <%= f.email_field :email, autofocus: true, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="form-group">
+    <label> パスワード </label>
+    <%= f.password_field :password, autocomplete: "off", class:'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="form-group">
       <%= f.check_box :remember_me %>
       <%= f.label "次回から自動的にログインする"  %>
     </div>
@@ -21,6 +22,11 @@
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
-<% end %>
 
-<%= render "users/shared/links" %>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>
+
+
+

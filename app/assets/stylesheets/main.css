@@ -6,39 +6,31 @@
 .error_explanation{
 	color: red;
 }
+
 body {
      margin: 0;
      background: url('bg.jpg');
      background-repeat:no-repeat;
      background-size: 1500px 1100px;
      background-position: center;
+}
+/*******Navbar*******/
+.testcolor{
+	color: #EAE9E9;
+}
+.dropdown {
+	margin-top: 16px;
+    color: #EAE9E9;
+}
 
-}
-.nav button{
-	margin: 10px;
-}
-.navbar a{
-	color: white;
-	font-size: 15px;
-	height: 100px;
-}
-.navbar-right{
-	margin-top:15px;
-}
 /*****Content*******/
 
 .content{
-	background-color: #F8F3F3;;
 	margin: 0px auto;
 	width: 980px;
 	min-width: 980px;
 	min-height: 420px;
-	padding: 2px 0px 0px 30px;
-	border: 3px ridge #7A6F6F;
-	border-radius: 8px;
 }
-
-
 
 /******* Footer ********/
 
@@ -84,10 +76,12 @@ body {
 
 }
 .form-login{
-	width: 90%;
-	margin: 0 auto;
-	padding-top: 15px;
-	padding-bottom: 15px; 
+	width: 60%;
+	margin: 0px auto;
+	padding-bottom: 15px;
+	background-color: #FEF7F7;
+	padding: 10px 15px 10px 15px;
+	border: 1px solid;
 }
 .form-login > input {
 	width: 100%;
